@@ -1,3 +1,6 @@
+<img width="1139" alt="Screenshot 2024-12-14 at 3 20 56 PM" src="https://github.com/user-attachments/assets/c43c463a-6822-4cbf-9098-ac06889f0d3e" />
+
+
 # 🦔 Whack-a-Mole!
 
 
