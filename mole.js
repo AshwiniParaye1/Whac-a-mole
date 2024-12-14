@@ -2,13 +2,16 @@ let currMoleTile;
 let currPlantTile;
 let score = 0;
 let gameOver = false;
+let timeLimit = 30; // 30 seconds time limit
+let timer;
 
 window.onload = function () {
   setGame();
+  startTimer();
 };
 
 function setGame() {
-  //setitng up the grid for the game board in html
+  // Setting up the grid for the game board in HTML
   for (let i = 0; i < 9; i++) {
     let tile = document.createElement("div");
     tile.id = i.toString();
@@ -18,6 +21,22 @@ function setGame() {
 
   setInterval(setMole, 600);
   setInterval(setPlant, 800);
+}
+
+function startTimer() {
+  timer = setInterval(function () {
+    if (timeLimit <= 0 || gameOver) {
+      // Stop timer when game is over
+      clearInterval(timer); // Stop the timer
+      document.getElementById("timer").innerText = "Time: 0s";
+      document.getElementById("score").innerText =
+        "TIME'S UP! Final Score: " + score;
+      gameOver = true; // Mark the game as over
+    } else {
+      document.getElementById("timer").innerText = "Time: " + timeLimit + "s";
+      timeLimit--;
+    }
+  }, 1000); // Decrease time every second
 }
 
 function getRandomTile() {
@@ -81,5 +100,9 @@ function selectTile() {
     document.getElementById("score").innerText =
       "GAME OVER: " + score.toString();
     gameOver = true;
+    clearInterval(timer); // Stop the timer if the player hits the plant
+    document.getElementById("timer").innerText = "Time: 0s"; // Set time to 0
+    document.getElementById("score").innerText =
+      "TIME'S UP! Your Final Score is: " + score; // Add final score message
   }
 }
