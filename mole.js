@@ -15,7 +15,8 @@ function setGame() {
     document.getElementById("board").appendChild(tile);
   }
 
-  setInterval(setMole, 2000);
+  setInterval(setMole, 1000);
+  setInterval(setPlant, 2000);
 }
 
 function getRandomTile() {
@@ -34,4 +35,17 @@ function setMole() {
   let num = getRandomTile();
   currMoleTile = document.getElementById(num);
   currMoleTile.appendChild(mole);
+}
+
+function setPlant() {
+  if (currPlantTile) {
+    currPlantTile.innerHTML = "";
+  }
+
+  let plant = document.createElement("img");
+  plant.src = "./piranha-plant.png";
+
+  let num = getRandomTile();
+  currPlantTile = document.getElementById(num);
+  currPlantTile.appendChild(plant);
 }
