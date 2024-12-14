@@ -1,6 +1,4 @@
-<img width="1139" alt="Screenshot 2024-12-14 at 3 20 56 PM" src="https://github.com/user-attachments/assets/c43c463a-6822-4cbf-9098-ac06889f0d3e" />
 # 🦔 Whack-a-Mole!
-[Uploading Screenshot 2024-12-14 at 3.20.56 PM.png…]()
 
 
 Welcome to the Whack-a-Mole game! 🕹️ A classic and fun game built using JavaScript, where you need to whack the moles as they pop up, scoring points for every successful hit!
