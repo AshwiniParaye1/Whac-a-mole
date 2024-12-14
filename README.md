@@ -1,8 +1,6 @@
 <img width="1139" alt="Screenshot 2024-12-14 at 3 20 56 PM" src="https://github.com/user-attachments/assets/c43c463a-6822-4cbf-9098-ac06889f0d3e" />
 
-
 # 🦔 Whack-a-Mole!
-
 
 Welcome to the Whack-a-Mole game! 🕹️ A classic and fun game built using JavaScript, where you need to whack the moles as they pop up, scoring points for every successful hit!
 
@@ -53,4 +51,8 @@ Alternatively, you can use a local server or IDE with live server capabilities (
 
 I hope you had fun playing the Whack-a-Mole game! Feel free to challenge your friends and see who can get the highest score! 🎮
 
-Happy whacking! 🦔
+## 🚀 Check Out the Live Project
+
+You can play the Whack-a-Mole game here: [Cick here to Play](https://1whackamole.netlify.app/)
+
+Enjoy the game and have fun! 🦔🎮
