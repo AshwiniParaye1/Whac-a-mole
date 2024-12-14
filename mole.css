@@ -23,3 +23,8 @@ body {
   background: url(./pipe.png);
   background-size: cover;
 }
+
+#board div img {
+  width: 100px;
+  height: 100px;
+}

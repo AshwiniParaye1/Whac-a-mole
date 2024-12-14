@@ -1,3 +1,8 @@
+let currMoleTile;
+let currPlantTile;
+let score = 0;
+let gameOver = false;
+
 window.onload = function () {
   setGame();
 };
@@ -19,6 +24,10 @@ function getRandomTile() {
 }
 
 function setMole() {
+  if (currMoleTile) {
+    currMoleTile.innerHTML = "";
+  }
+
   let mole = document.createElement("img");
   mole.src = "./monty-mole.png";
 
