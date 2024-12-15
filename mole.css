@@ -13,10 +13,10 @@ h2 {
 }
 
 #board {
-  width: 90vw; /* Set width relative to the viewport */
-  max-width: 540px; /* Limit the max width for larger screens */
-  height: 90vw; /* Maintain a square board */
-  max-height: 540px; /* Match the max width */
+  width: 90vw;
+  max-width: 540px;
+  height: 90vw;
+  max-height: 540px;
   margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
@@ -27,14 +27,14 @@ h2 {
 }
 
 #board div {
-  width: 30%; /* Each tile takes 1/3 of the board width */
-  height: 30%; /* Match the width to maintain squares */
+  width: 30%;
+  height: 30%;
   background: url(./pipe.png);
   background-size: cover;
 }
 
 #board div img {
-  width: 50%; /* Images scale based on tile size */
+  width: 50%;
   height: auto;
   user-select: none;
   -moz-user-select: none;
@@ -42,18 +42,45 @@ h2 {
   -webkit-user-select: none;
 }
 
+#replayButton {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  background-color: rgb(1, 149, 1);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+#replayButton:hover {
+  background-color: rgb(4, 104, 4);
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#replayButton:focus {
+  outline: none;
+}
+
 /* Media Query for Small Screens */
 @media (max-width: 600px) {
   h1 {
-    font-size: 1.5rem; /* Adjust heading size */
+    font-size: 1.5rem;
   }
 
   h2 {
-    font-size: 1.2rem; /* Adjust timer and score size */
+    font-size: 1.2rem;
   }
 
   #board {
-    width: 100vw; /* Use the full width for smaller screens */
+    width: 100vw;
     height: 100vw;
   }
 }

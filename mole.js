@@ -11,6 +11,14 @@ window.onload = function () {
 };
 
 function setGame() {
+  // Reset board, score, and game over flag if replaying
+  document.getElementById("board").innerHTML = ""; // Clear the board
+  score = 0;
+  gameOver = false;
+  timeLimit = 30;
+  document.getElementById("score").innerText = "Score: 0";
+  document.getElementById("timer").innerText = "Time: 30s";
+
   // Setting up the grid for the game board in HTML
   for (let i = 0; i < 9; i++) {
     let tile = document.createElement("div");
@@ -26,7 +34,6 @@ function setGame() {
 function startTimer() {
   timer = setInterval(function () {
     if (timeLimit <= 0 || gameOver) {
-      // Stop timer when game is over
       clearInterval(timer); // Stop the timer
       document.getElementById("timer").innerText = "Time: 0s";
       document.getElementById("score").innerText =
@@ -105,4 +112,9 @@ function selectTile() {
     document.getElementById("score").innerText =
       "TIME'S UP! Your Final Score is: " + score; // Add final score message
   }
+}
+
+function replayGame() {
+  setGame(); // Restart the game
+  startTimer(); // Start the timer
 }
